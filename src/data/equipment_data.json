@@ -1,0 +1,49 @@
+{
+  "equipmentData": [
+    {
+      "id": 1,
+      "name": "Dumbbells Set",
+      "description": "A set of adjustable dumbbells ranging from 5 to 50 pounds.",
+      "category": "Dumbbells",
+      "price_per_day": 5.0,
+      "image": "/images/db.jpg",
+      "features": [
+        "Adjustable weights",
+        "Ergonomic handles",
+        "Anti-slip grip"
+      ],
+      "isFeatured":true
+    },
+    {
+      "id": 2,
+      "name": "Treadmill",
+      "description": "A high-quality treadmill with multiple speed settings and an LCD display.",
+      "category": "Treadmills",
+      "price_per_day": 15.0,
+      "image": "/images/t.jpg",
+      "features": [
+        "Multiple speed settings",
+        "Incline adjustment",
+        "LCD display with heart rate monitor"
+      ],
+      "isFeatured":true
+
+    },
+   
+    {
+      "id": 3,
+      "name": "Compact Treadmill",
+      "description": "A compact treadmill that fits easily into small spaces.",
+      "category": "Treadmills",
+      "price_per_day": 12.0,
+      "image": "/images/download.jpeg",
+      "features": [
+        "Foldable design",
+        "Quiet motor",
+        "Speed up to 10 mph"
+      ],
+      "isFeatured":true
+
+    }
+  ]
+}
