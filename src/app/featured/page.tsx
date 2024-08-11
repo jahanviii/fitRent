@@ -19,7 +19,7 @@ function Featured() {
     const featuredEquipment = equipment.equipmentData.filter((item: Equipment) => item.isFeatured);
 
     return (
-        <div className="py-12 bg-black bg-opacity-30">
+        <div className="py-12 bg-zinc-900 bg-opacity-30">
             <div>
                 <div className="text-center">
                     <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">FEATURED EQUIPMENT</h2>

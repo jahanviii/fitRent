@@ -1,9 +1,7 @@
-
 "use client";
 import { Button } from "@/components/ui/moving-border";
-
 import { toast } from "react-toastify";
-import { useState } from "react";
+import { useCart } from "@/contexts/CartContext"; // Import the CartContext hook
 import Image from "next/image";
 import equipment from "../../data/equipment.json";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
@@ -18,9 +16,17 @@ interface Equipment {
 }
 
 function Listing() {
-  const { allequipmentData } = equipment as { allequipmentData: Equipment[] };
+  // Ensure the data is transformed to match the Equipment interface
+  const allequipmentData = (equipment as { allequipmentData: any[] }).allequipmentData.map(item => ({
+    ...item,
+    price: parseFloat(item.price), // Convert price to number
+  })) as Equipment[];
+
+  // Use the useCart hook to get access to the cart context
+  const { addToCart } = useCart();
 
   const handleAddToCart = (item: Equipment) => {
+    addToCart(item); // Use the context's addToCart method
     toast.success(`${item.name} added to cart!`, {
       position: "top-center",
       autoClose: 1200,
@@ -31,7 +37,6 @@ function Listing() {
       progress: undefined,
     });
   };
-
 
   return (
     <div className="pt-44 bg-black bg-opacity-30">
