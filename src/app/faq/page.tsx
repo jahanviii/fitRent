@@ -6,7 +6,7 @@ import { LuChevronDownCircle } from "react-icons/lu";
 const faqData = [
   {
     question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, PayPal, and bank transfers."
+    answer: "We accept all major credit cards,google Pay, and bank transfers."
   },
   {
     question: "When will I be charged?",
